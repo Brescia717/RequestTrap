@@ -1,3 +1,18 @@
-// Place all the styles related to the Requests controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.hidden {
+  display: none;
+}
+.title {
+  font-weight: bold;
+}
+.info {
+  overflow:auto;
+  border: black solid 0.5px;
+  padding: 5px;
+  min-height: 30px;
+  display: block;
+  color: green;
+  background: white;
+}
+body.container {
+  background: lightgray;
+}

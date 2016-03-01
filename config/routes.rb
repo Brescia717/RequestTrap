@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'requests/index'
+
+  get 'requests/create'
+
+  get 'requests/show'
+
   root 'welcome#index'
 
   # Example of regular route:

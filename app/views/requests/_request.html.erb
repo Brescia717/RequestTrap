@@ -1,0 +1,59 @@
+<div>
+  <p>
+    <span class="label">Request date:&nbsp;</span>
+    <span class="info">
+      <%= request.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+    </span>
+  </p>
+  <p>
+    <span class="label">Remote IP:&nbsp;</span>
+    <span class="info">
+      <%= request.remote_ip %>
+    </span>
+  </p>
+  <p>
+    <span class="label">Request method:&nbsp;</span>
+    <span class="info">
+      <%= request.request_method %>
+    </span>
+  </p>
+  <p>
+    <span class="label">Scheme:&nbsp;</span>
+    <span class="info">
+      <%= request.scheme %>
+    </span>
+  </p>
+  <p>
+    <span class="label">Query string:&nbsp;</span>
+    <span class="info">
+      <%= request.query_string %>
+    </span>
+  </p>
+  <p>
+    <span class="label">Query params:&nbsp;</span>
+    <span class="info">
+      <%= request.query_params %>
+    </span>
+  </p>
+  <p>
+    <span class="label">Cookies:&nbsp;</span>
+    <span class="info">
+      <%= request.cookies %>
+    </span>
+  </p>
+  <p>
+    <span class="label">Headers:&nbsp;</span>
+    <span class="info">
+      <%= request.headers %>
+    </span>
+  </p>
+  <button id="raw-response-btn"></button>
+  <div id="raw-response">
+    <p>
+      <span class="label">Raw response:&nbsp;</span>
+      <span class="info">
+        <%= request.raw_response %>
+      </span>
+    </p>
+  </div>
+</div>

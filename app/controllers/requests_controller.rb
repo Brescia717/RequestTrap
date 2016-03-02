@@ -16,11 +16,11 @@ class RequestsController < ApplicationController
   private
 
   def trap_id
-    @trap_id = params[:trap_id]
+    @trap_id ||= params[:trap_id]
   end
 
   def filtered_requests
-    @requests = Request.where(trap_id: trap_id)
+    @requests ||= Request.where(trap_id: trap_id)
   end
 
 end

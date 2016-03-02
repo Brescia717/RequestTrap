@@ -1,18 +1,35 @@
 .hidden {
   display: none;
 }
-.title {
-  font-weight: bold;
-}
-.info {
-  overflow:auto;
+.headers {
+  background: white;
   border: black solid 0.5px;
   padding: 5px;
-  min-height: 30px;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  border-radius: 5px;
+  .header-label {
+    font-weight: bold;
+    line-height: 35px;
+  }
+}
+.title {
+  font-weight: 400;
+  font-size: 16pt;
+}
+.info {
+  overflow: auto;
+  border: black solid 0.5px;
+  padding: 5px;
+  min-height: 30px !important;
   display: block;
   color: green;
   background: white;
+  border-radius: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
+.padding-left { padding-left: 15px;}
 body.container {
   background: lightgray;
 }

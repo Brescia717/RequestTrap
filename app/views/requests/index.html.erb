@@ -1,0 +1,7 @@
+<h1>Requests to: <%= trap_id.capitalize %></h1>
+<hr>
+<div>
+  <% filtered_requests.each do |req| %>
+    <%= render partial: 'request', locals: { request: req } %>
+  <% end %>
+</div>

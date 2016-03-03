@@ -1,0 +1,68 @@
+<div id="request-id-<%= "#{request.id}" %>" class="request">
+  <p>
+    <span class="title">Request date:&nbsp;</span>
+    <span class="info padding-left">
+      <%= request.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+    </span>
+  </p>
+  <p>
+    <span class="title">Remote IP:&nbsp;</span>
+    <span class="info padding-left">
+      <%= request.remote_ip %>
+    </span>
+  </p>
+  <p>
+    <span class="title">Request method:&nbsp;</span>
+    <span class="info padding-left">
+      <%= request.request_method %>
+    </span>
+  </p>
+  <p>
+    <span class="title">Scheme:&nbsp;</span>
+    <span class="info padding-left">
+      <%= request.scheme %>
+    </span>
+  </p>
+  <p>
+    <span class="title">Query string:&nbsp;</span>
+    <span class="info padding-left">
+      <%= request.query_string %>
+    </span>
+  </p>
+  <p>
+    <span class="title">Query params:&nbsp;</span>
+    <pre class="info query-params">
+      <%= JSON.pretty_generate(request.query_params) %>
+    </pre>
+  </p>
+  <p>
+    <span class="title">Cookies:&nbsp;</span>
+    <pre class="info cookies">
+      <%= JSON.pretty_generate(request.cookies) %>
+    </pre>
+  </p>
+  <p>
+    <span class="title">Headers:&nbsp;</span>
+    <div class="headers row container-fluid">
+
+      <% request.headers.each do |label, info| %>
+      <p>
+        <span class="header-label col-md-2"><%= label %>:&nbsp;</span>
+        <span class="info col-md-10"><%= info %></span>
+      </p>
+
+      <% end %>
+    </div>
+  </p>
+  <a href="#raw-response-<%= "#{request.id}" %>"
+    class="btn btn-default btn-sm" data-toggle="collapse">
+    Show Raw response
+  </a>
+  <div id="raw-response-<%= "#{request.id}" %>" class="collapse">
+    <p>
+      <span class="title">Raw response:</span>
+      <span class="info"><%= request.raw_response %></span>
+    </p>
+  </div>
+</div>
+<hr>

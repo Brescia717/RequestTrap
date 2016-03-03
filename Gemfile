@@ -29,13 +29,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'puma'
+gem 'gon'
+
 gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-gem 'puma'
-gem 'gon'
 
 group :development, :test do
   gem 'pry-rails'

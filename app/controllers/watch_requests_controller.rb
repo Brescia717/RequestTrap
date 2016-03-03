@@ -31,7 +31,7 @@ class WatchRequestsController < ApplicationController
       :partial => "requests/request",
       :formats => [ :html ],
       :locals => { :request => request_obj})
-      
+
     html.gsub(/ *\n+/,'')
   end
 end

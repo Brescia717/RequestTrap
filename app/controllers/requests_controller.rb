@@ -21,7 +21,7 @@ class RequestsController < ApplicationController
   end
 
   def filtered_requests
-    @requests ||= Request.where(trap_id: trap_id)
+    @requests ||= Request.where(trap_id: trap_id).order(created_at: :desc)
   end
 
 end

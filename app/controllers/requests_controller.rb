@@ -2,6 +2,7 @@ class RequestsController < ApplicationController
   helper_method :trap_id, :filtered_requests
 
   def index
+    gon.trap_id = trap_id
   end
 
   def create

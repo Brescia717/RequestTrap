@@ -1,5 +1,9 @@
 <div id="request-id-<%= "#{request.id}" %>" class="request">
   <p>
+    <span class="title">Request id:&nbsp;</span>
+    <span class="info"><%= request.id %></span>
+  </p>
+  <p>
     <span class="title">Request date:&nbsp;</span>
     <span class="info padding-left">
       <%= request.created_at.strftime("%m/%d/%Y at %I:%M%p") %>

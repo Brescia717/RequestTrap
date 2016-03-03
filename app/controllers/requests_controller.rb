@@ -2,6 +2,7 @@ class RequestsController < ApplicationController
   helper_method :trap_id, :filtered_requests
 
   def index
+    gon.trap_id = trap_id
   end
 
   def create
@@ -20,7 +21,7 @@ class RequestsController < ApplicationController
   end
 
   def filtered_requests
-    @requests ||= Request.where(trap_id: trap_id)
+    @requests ||= Request.where(trap_id: trap_id).order(created_at: :desc)
   end
 
 end

@@ -35,6 +35,7 @@ gem 'rails_12factor', group: :production
 # gem 'capistrano-rails', group: :development
 
 gem 'puma'
+gem 'gon'
 
 group :development, :test do
   gem 'pry-rails'

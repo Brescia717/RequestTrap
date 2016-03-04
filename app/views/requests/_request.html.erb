@@ -65,7 +65,7 @@
   <div id="raw-response-<%= "#{request.id}" %>" class="collapse">
     <p>
       <span class="title">Raw request:</span>
-      <span class="info"><%= request.raw_response %></span>
+      <span class="info"><%= JSON.pretty_generate(request.raw_response) %></span>
     </p>
   </div>
 </div>

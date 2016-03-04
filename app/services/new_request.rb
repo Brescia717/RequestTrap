@@ -14,7 +14,7 @@ class NewRequest
     request_obj.query_params   = request.parameters
     request_obj.cookies        = request.cookies
     request_obj.headers        = ExtractHeaders.new(request.headers).extract
-    request_obj.raw_response   = request.body.string
+    request_obj.raw_response   = ExtractRawRequest.new(request.env).extract
 
     request_obj.save
   end

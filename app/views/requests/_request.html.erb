@@ -58,14 +58,35 @@
       <% end %>
     </div>
   </p>
+  <p>
+
+  </p>
   <a href="#raw-response-<%= "#{request.id}" %>"
     class="btn btn-default btn-sm" data-toggle="collapse">
-    Show Raw request
+    Show raw request
   </a>
   <div id="raw-response-<%= "#{request.id}" %>" class="collapse">
     <p>
-      <span class="title">Raw request:</span>
-      <span class="info"><%= JSON.pretty_generate(request.raw_response) %></span>
+      <span class="title">Raw request:&nbsp;</span>
+      <div class="headers row container-fluid">
+        <% request.raw_response.each do |label, info| %>
+          <p>
+            <span class="header-label col-md-3"><%= label.upcase %>:&nbsp;</span>
+            <div class="info col-md-9">
+            <% if info.class == Hash %>
+              <% info.each do |k, v| %>
+                <div class="raw-response-info-header">
+                  <span class="rr-label"><%= "#{k}:" %></span>
+                  <span class="rr-info"><%= "#{v}" %></span>
+                </div>
+              <% end %>
+            <% else %>
+              <span><%= info %></span>
+            <% end %>
+          </div>
+          </p>
+        <% end %>
+      </div>
     </p>
   </div>
 </div>

@@ -33,3 +33,13 @@
 body.container {
   background: lightgray;
 }
+.raw-response-info-header {
+  padding-bottom: 10px;
+  .rr-label {
+    color: black;
+    font-weight: bold;
+  }
+  .rr-info {
+    color: green;
+  }
+}
